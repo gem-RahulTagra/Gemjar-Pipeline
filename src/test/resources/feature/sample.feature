@@ -1,6 +1,10 @@
 Feature: Search for shoes
 
-  @hello
+  @shoes
  Scenario: Open Google Chrome
    Given Search for the shoes
+
+  @books
+  Scenario: Open Google Chrome
+    Given Search for the books
 

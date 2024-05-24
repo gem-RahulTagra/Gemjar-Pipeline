@@ -15,4 +15,13 @@ public class Sample extends GemEcoUpload {
             e.printStackTrace();
         }
     }
+
+    @Given("Search for the books")
+    public void searchForThebooks(){
+        try{
+            SampleImplementation.bookSearch();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }

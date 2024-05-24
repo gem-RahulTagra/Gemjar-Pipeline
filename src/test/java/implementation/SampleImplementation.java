@@ -13,6 +13,24 @@ public class SampleImplementation {
                 click(By.xpath("//textarea[@class='gLFyf']"));
                 typeText(By.xpath("//textarea[@class='gLFyf']"), "Shoes" + Keys.ENTER);
                 GemTestReporter.addTestStep("enter text in the input field","added text in input field", STATUS.PASS);
+                System.out.println("Shoes");
+            }
+            else {
+                GemTestReporter.addTestStep("text is not entered in the input field","text is not entered input field", STATUS.FAIL);
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void bookSearch(){
+        try{
+            if(isExist(By.xpath("//textarea[@class='gLFyf']"))) {
+                click(By.xpath("//textarea[@class='gLFyf']"));
+                typeText(By.xpath("//textarea[@class='gLFyf']"), "Books" + Keys.ENTER);
+                GemTestReporter.addTestStep("enter text in the input field","added text in input field", STATUS.PASS);
+                System.out.println("Books");
             }
             else {
                 GemTestReporter.addTestStep("text is not entered in the input field","text is not entered input field", STATUS.FAIL);
