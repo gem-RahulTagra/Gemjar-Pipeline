@@ -29,7 +29,7 @@ steps:
       $yamlContent.environment = '$(env)'
       
       # Convert back to YAML format
-      $updatedYamlContent = $yamlContent | ConvertTo-Yaml -Depth 10
+      $updatedYamlContent = $yamlContent | ConvertTo-Yaml
       
       # Write the updated YAML content back to the file
       Set-Content -Path $yamlFile -Value $updatedYamlContent
