@@ -11,25 +11,6 @@ steps:
     versionSpec: '11'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
-    
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      $yamlFile = '$(Build.SourcesDirectory)/src/test/resources/yaml/gemjar-config.yml'
-      
-      # Read the YAML file content
-      $yamlContent = Get-Content $yamlFile -Raw | ConvertFrom-Yaml
-      
-      # Update values
-      $yamlContent.tags = '$(tags)'
-      $yamlContent.environment = '$(env)'
-      
-      # Convert back to YAML format
-      $updatedYamlContent = $yamlContent | ConvertTo-Yaml -Depth 10
-      
-      # Write the updated YAML content back to the file
-      Set-Content -Path $yamlFile -Value $updatedYamlContent
 
 - script: 'mvn clean test'  # Command to build and run your Selenium tests using Maven
   displayName: 'Run Selenium Tests'
