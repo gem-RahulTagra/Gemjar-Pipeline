@@ -16,6 +16,9 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
+      Install-Module -Name PowerShell-Yaml -Scope CurrentUser -Force
+      Import-Module PowerShell-Yaml
+      
       $yamlFile = '$(Build.SourcesDirectory)/src/test/resources/yaml/gemjar-config.yml'
       
       # Read the YAML file content
