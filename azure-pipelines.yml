@@ -19,7 +19,7 @@ steps:
       Install-Module -Name PowerShell-Yaml -Scope CurrentUser -Force
       Import-Module PowerShell-Yaml
       
-      $yamlFile = '$(Build.SourcesDirectory)/src/test/resources/yaml/gemjar-config.yml'
+      $yamlFile = '$(Build.SourcesDirectory)/src/test/resources/gemjar-config.yml'
       
       # Read the YAML file content
       $yamlContent = Get-Content $yamlFile -Raw | ConvertFrom-Yaml
