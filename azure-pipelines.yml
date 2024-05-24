@@ -12,5 +12,5 @@ steps:
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
  
-- script: 'mvn clean test -Dcucumber.filter.tags=$(CUCUMBER_TAGS)'  # Command to build and run your Selenium tests using Maven
+- script: 'mvn clean test'  # Command to build and run your Selenium tests using Maven
   displayName: 'Run Selenium Tests'
